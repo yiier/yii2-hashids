@@ -20,7 +20,7 @@ use yii\base\BaseObject;
  */
 class Hashids extends BaseObject
 {
-    public string $salt;
+    public string $salt = '';
 
     public int $minHashLength = 0;
 

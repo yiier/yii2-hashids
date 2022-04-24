@@ -16,7 +16,7 @@ class HashidsTest extends TestCase
     /**
      * @throws \yii\base\InvalidConfigException
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->hashids = Yii::createObject([
             'class' => Hashids::class,

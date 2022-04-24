@@ -8,7 +8,7 @@ use yiier\tests\TestModel;
 
 class HashidsBehaviorTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         new \yii\web\Application([
             'id' => 'testApp',
