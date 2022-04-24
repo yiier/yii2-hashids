@@ -12,15 +12,6 @@
     "encrypt",
     "decrypt"
   ],
-  "require": {
-    "php": "^7.2 || ^8.0",
-    "hashids/hashids": "^4.1",
-    "yiisoft/yii2": "^2.0.42"
-  },
-  "require-dev": {
-    "yiisoft/yii2-coding-standards": "~2.0",
-    "phpunit/phpunit": "^6.5.14"
-  },
   "license": "MIT",
   "authors": [
     {
@@ -32,6 +23,21 @@
       "email": "caizhenghai@gmail.com"
     }
   ],
+  "require": {
+    "php": "^7.2 || ^8.0",
+    "hashids/hashids": "^4.1",
+    "yiisoft/yii2": "^2.0.42"
+  },
+  "require-dev": {
+    "yiisoft/yii2-coding-standards": "~2.0",
+    "phpunit/phpunit": "^7.0 || ^8.0"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
   "autoload": {
     "psr-4": {
       "yiier\\hashids\\": "src/"
@@ -46,5 +52,11 @@
     "branch-alias": {
       "dev-master": "2.0.x-dev"
     }
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
 }
