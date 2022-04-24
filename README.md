@@ -1,10 +1,5 @@
-<p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
-    </a>
-    <h1 align="center">Yii2 Hashids</h1>
-    <br>
-</p>
+Yii2 for [hashids](https://github.com/vinkla/hashids)
+------------------------------
 
 [![Build Status](https://img.shields.io/travis/yiier/yii2-hashids.svg?style=flat-square)](http://travis-ci.org/yiier/yii2-hashids)
 [![version](https://img.shields.io/packagist/v/yiier/yii2-hashids.svg?style=flat-square)](https://packagist.org/packages/yiier/yii2-hashids)
@@ -25,7 +20,7 @@ $ composer require yiier/yii2-hashids
 
 In your `main.php` or `web.php` (dependences your yii2 project constructor):
 
-```
+```php
 [
 	'hahsids' => [
 		'class' => 'yiier\hashids\Hashids',
@@ -38,7 +33,7 @@ In your `main.php` or `web.php` (dependences your yii2 project constructor):
 
 Also using this like this:
 
-```
+```php
 $hashids = Yii::createObject([
 	'class' => 'yiier\hashids\Hashids'
 ]);
@@ -57,6 +52,4 @@ $ phpunit
 ## Lisence
 
 ![MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lichunqiang/hashids/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
