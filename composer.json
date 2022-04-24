@@ -15,23 +15,31 @@
   "require": {
     "php": "^7.2 || ^8.0",
     "hashids/hashids": "^4.1",
-    "yiisoft/yii2": "^2.0"
+    "yiisoft/yii2": "^2.0.42"
+  },
+  "require-dev": {
+    "yiisoft/yii2-coding-standards": "~2.0",
+    "phpunit/phpunit": "^6.5.14"
   },
   "license": "MIT",
   "authors": [
     {
       "name": "lichunqiang",
       "email": "light-li@hotmail.com"
+    },
+    {
+      "name": "forecho",
+      "email": "caizhenghai@gmail.com"
     }
   ],
   "autoload": {
     "psr-4": {
-      "light\\hashids\\": "src/"
+      "yiier\\hashids\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "light\\tests\\": "tests/"
+      "yiier\\tests\\": "tests/"
     }
   },
   "extra": {
