@@ -11,15 +11,12 @@
 [![Download](https://img.shields.io/packagist/dt/yiier/yii2-hashids.svg?style=flat-square)](https://packagist.org/packages/yiier/yii2-hashids)
 [![Issues](https://img.shields.io/github/issues/yiier/yii2-hashids.svg?style=flat-square)](https://github.com/yiier/yii2-hashids/issues)
 
-__NOTE__: The master branch for 2.0 version, that require mini php version is 5.6. You can require `light/hashids:^1.0`
-to use old version.
-
 ## Installation
 
 Install this package via [Composer](https://getcomposer.org/):
 
 ```
-$ composer require yiier/yii2-hashids=^2.0
+$ composer require yiier/yii2-hashids
 ```
 
 ## Usage
