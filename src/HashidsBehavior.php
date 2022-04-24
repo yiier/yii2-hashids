@@ -10,7 +10,10 @@ use yii\di\Instance;
  */
 class HashidsBehavior extends Behavior
 {
-    public string|array|Hashids $hashids = 'hashids';
+    /**
+     * @var string|array|Hashids The `hashids` component
+     */
+    public $hashids = 'hashids';
 
     /**
      * @inheritdoc
