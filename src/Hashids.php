@@ -1,15 +1,6 @@
 <?php
 
-/*
- * This file is part of the light/hashids.
- *
- * (c) lichunqiang <light-li@hotmail.com>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
-
-namespace light\hashids;
+namespace yiier\hashids;
 
 use Hashids\Hashids as BaseHashids;
 use yii\base\BaseObject;
@@ -22,56 +13,35 @@ use yii\base\BaseObject;
  * @method string encodeHex(string $id)
  * @method string decodeHex(string $id)
  *
- * @version 1.0.2
+ * @version 2.0.0
  *
  * @author lichunqiang<light-li@hotmail.com>
  * @license MIT
  */
 class Hashids extends BaseObject
 {
-    /**
-     * The salt.
-     *
-     * @var string
-     */
-    public $salt;
-    /**
-     * The min hash length.
-     *
-     * @var int
-     */
-    public $minHashLength = 0;
-    /**
-     * The alphabet for hashids.
-     *
-     * @var string
-     */
-    public $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-    /**
-     * The instance of the Hashids.
-     *
-     * @var \Hashids\Hashids
-     */
-    private $_hashids;
-    
-    /**
-     * {@inheritdoc}
-     */
+    public string $salt;
+
+    public int $minHashLength = 0;
+
+    public string $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+
+    private BaseHashids $hashids;
+
+
     public function init()
     {
         parent::init();
-        $this->_hashids = new BaseHashids($this->salt, $this->minHashLength, $this->alphabet);
+        $this->hashids = new BaseHashids($this->salt, $this->minHashLength, $this->alphabet);
     }
-    
-    /**
-     * {@inheritdoc}
-     */
+
+
     public function __call($name, $params)
     {
-        if (method_exists($this->_hashids, $name)) {
-            return call_user_func_array([$this->_hashids, $name], $params);
+        if (method_exists($this->hashids, $name)) {
+            return call_user_func_array([$this->hashids, $name], $params);
         }
-        
+
         return parent::__call($name, $params);
     }
 }
